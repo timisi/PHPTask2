@@ -1,6 +1,7 @@
 <!-- Header  -->
     <?php
     include_once("lib/header.php");
+    require_once('functions/alert.php');
     ?>
 <!-- Header -->
 
@@ -11,7 +12,7 @@
 <!-- Navbar -->
             <!-- HEADER -->
             <header>
-                <!-- <br/><br/><br/><br/><br/><br/><br/><br/><br/> -->
+            <?php print_alert(); ?>
                 <h1>WELCOME TO START-NG: <span>We Train & Breed Next Generation Techies.</span></h1>
 				<nav class="codrops-demos">
                     <span>Have <strong>"FUN"</strong> While Learning Here.</span><br/><br/><br/>

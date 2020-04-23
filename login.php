@@ -1,12 +1,18 @@
 <!-- Header  -->
 <?php
-include_once("lib/header.php");
-    //session_start();
+include_once('lib/header.php');
+
+require_once('functions/alert.php');
 
     //check if user user allready loggedIn using the $_SESSION['loggedIn']
     if(isset($_SESSION['loggedIn']) && !empty($_SESSION['loggedIn'])){
         // redirect to dashboard
         header("Location: dashboard.php");
+    }
+    else if(isset($_SESSION['loggedin']) && !empty($_SESSION['loggedin']) && $_SESSION['designation'] == 'Student'){
+        header("location: dashboard_students.php");
+    } elseif (isset($_SESSION['loggedin']) && !empty($_SESSION['loggedin']) && $_SESSION['designation'] == 'Staff') {
+        header("location: dashboard_staff.php");
         die();
     }
 ?>
@@ -20,25 +26,13 @@ include_once("lib/header.php");
             <!-- LOGIN PAGE --><br/><br/><br/>
             <h3 id="welcome">Welcome: Please Login</h3>
 
-            <div class="userform">
+        <div class="userform">
             <p>
-                <?php
-                    if(isset($_SESSION['message']) && !empty($_SESSION['message'])){
-                        echo "<span style='color:green; font-size:15px;'>" . $_SESSION['message'] . "</span>";
-                    }
-                    session_destroy();
-                ?>
+                <?php  print_alert(); ?>
             </p>
+
             <!-- FORM -->
               <form action="processlogin.php" method="POST">
-                  <p>
-                      <?php
-                        if(isset($_SESSION['error']) && !empty($_SESSION['error'])){
-                                echo "<span style='color:red'>" . $_SESSION['error'] . "</span>";
-                            }
-                            //session_destroy();
-                    ?>
-                  </p>
                 <p>
                     <label for="fname">Email</label>
                     <input type="text" id="fname" name="email" placeholder="Your Email...">
@@ -57,11 +51,11 @@ include_once("lib/header.php");
                     <a href="register.php">Don't have an account? Register</a>
                 </p>
               </form>
-            </div>
+        </div>
             <!-- LOGIN PAGE  -->
 
 <!-- Footer -->
 <?php
     include_once("lib/footer.php");
-    ?>
+?>
 <!-- Footer -->
