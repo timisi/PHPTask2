@@ -5,10 +5,10 @@
     //session_start();
 
     //check if user user allready loggedIn using the $_SESSION['loggedIn']
-    if(isset($_SESSION['loggedIn']) && !empty($_SESSION['loggedIn'])){
+    if(isset($_SESSION['loggedIn']) && $_SESSION['designation'] != 'Super Admin' || empty($_SESSION['loggedIn'])){
         // redirect to dashboard
-        header("Location: dashboard.php");
-        die();
+        header("Location: login.php");
+        //die();
     }
 
 ?>
@@ -23,7 +23,7 @@
             <h3 id="welcome">Welcome: Please Register</h3>
 
             <div class="userform">
-              <form action="processregister.php" method="POST">
+              <form action="process/processregisteradmin.php" method="POST">
                     <div class="row col-6">
                         <p>All Fields are required * </p>
                     </div>
@@ -119,7 +119,7 @@
                         >Php</option>
                         <option
                         <?php
-                            if (isset($_SESSION['courses']) && !empty($_SESSION['courses']) && $_SESSION['courses'] == 'Design') {
+                            if (isset($_SESSION['courses']) && !empty($_SESSION['courses']) && $_SESSION['coueses'] == 'Design') {
                                 echo 'selected';
                             }
                         ?>
@@ -133,7 +133,7 @@
                         >HTML/CSS/JS</option>
                         <option
                         <?php
-                            if (isset($_SESSION['courses']) && !empty($_SESSION['courses']) && $_SESSION['courses'] == 'C#') {
+                            if (isset($_SESSION['courses']) && !empty($_SESSION['courses']) && $_SESSION['department'] == 'C#') {
                                 echo 'selected';
                             }
                         ?>
@@ -150,10 +150,6 @@
 
                             <p>
                                 <input type="submit" value="REGISTER">
-                            </p>
-
-                            <p id="shortText">
-                                    <a href="login.php">Already have an account? Login</a>
                             </p>
                         </form>
                     </div>

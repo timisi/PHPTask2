@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 input[type=text], select{
     width: 30%;
     padding: 12px 20px;
@@ -46,3 +47,88 @@ input[type=text], select{
   #shortText{
       font-size: 18px;
   }
+=======
+input[type=text], select{
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=date]{
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+
+  input[type=time]{
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=textarea]{
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+
+  input[type=password]{
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    width: 20%;
+    background-color: #7cbcd6;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+
+
+
+  input[type=submit]:hover {
+    background-color: #92a093;
+  }
+
+  .userform {
+    border-radius: 5px;
+    background-color:  #c7ebfa;
+    padding: 20px;
+  }
+
+  #welcome{
+      font-size: 40px;
+  }
+
+  #shortText{
+      font-size: 18px;
+  }
+>>>>>>> Stashed changes

@@ -17,9 +17,6 @@
                     <a href="login.php">
                         <strong>Login</strong>
                     </a>
-                    <a href="register.php">
-                        <strong>Register</strong>
-                    </a>
                     <a href="forgot.php">
                         <strong>Forgot Password</strong>
                     </a>
