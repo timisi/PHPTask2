@@ -1,5 +1,1 @@
-<<<<<<< Updated upstream
-{"id":-1,"first_name":"Akintunde ","last_name":"AFOLAYAN ","email":"afolayantoluwalope@gmail.com","password":"$2y$10$XvERt8P6EZGqBF0rcdnXuujsC1zqBcWS9qhdk1a9R2bc7991CBFva","designation":"Student","gender":"Female","courses":"FrontEnd"}
-=======
 {"id":null,"first_name":"Toluwalope ","last_name":"AFOLAYAN ","email":"afolayantoluwalope@gmail.com","password":"$2y$10$QurTLGBr\/MfrLP7sNOJ4gOfsxskvpxe3kqTJ7370BvA3XywfLZvJC","designation":"Mentor","gender":"Male","courses":"Php","registration_date":"24-04-2020 17:31:42"}
->>>>>>> Stashed changes
